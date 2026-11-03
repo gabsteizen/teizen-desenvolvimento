@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="TechStore: descubra gadgets tecnológicos e inovações para o futuro.">
+
+    <title>TechStore | O futuro está aqui</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="products.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <a href="#inicio" class="logo">
+            <span class="logo-icon">T</span>
+            Tech<span>Store</span>
+        </a>
+
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#carrinho">Carrinho</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <a href="#carrinho" class="atalho-carrinho">
+            <span>🛒</span>
+            Carrinho
+            <span id="contador" class="contador">0</span>
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="destaque">
+
+            <div class="destaque-conteudo">
+
+                <span class="etiqueta">
+                    ✦ TECNOLOGIA E INOVAÇÃO
+                </span>
+
+                <h1>
+                    O futuro está<br>
+                    <span>em suas mãos.</span>
+                </h1>
+
+                <p>
+                    Explore uma nova geração de gadgets inteligentes.
+                    Tecnologia, inovação e experiências extraordinárias
+                    em um só lugar.
+                </p>
+
+                <a href="#produtos" class="botao-principal">
+                    Explorar produtos →
+                </a>
+
+                <div class="destaque-info">
+                    <span>⚡ Inovação</span>
+                    <span>◈ Tecnologia</span>
+                    <span>✦ Futuro</span>
+                </div>
+
+            </div>
+
+            <div class="destaque-visual">
+
+                <div class="orbita orbita-1"></div>
+                <div class="orbita orbita-2"></div>
+
+                <div class="icone-futuro">
+                    <span>◈</span>
+                </div>
+
+                <div class="selo-flutuante">
+                    <span class="ponto"></span>
+                    Tecnologia do futuro
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BENEFÍCIOS -->
+        <section class="beneficios">
+
+            <article class="beneficio">
+                <span class="beneficio-icone">⚡</span>
+                <div>
+                    <h3>Alta tecnologia</h3>
+                    <p>Produtos inovadores</p>
+                </div>
+            </article>
+
+            <article class="beneficio">
+                <span class="beneficio-icone">◈</span>
+                <div>
+                    <h3>Design moderno</h3>
+                    <p>Estilo e funcionalidade</p>
+                </div>
+            </article>
+
+            <article class="beneficio">
+                <span class="beneficio-icone">✦</span>
+                <div>
+                    <h3>Experiência digital</h3>
+                    <p>O futuro mais próximo</p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- CATÁLOGO -->
+        <section id="produtos" class="secao">
+
+            <div class="cabecalho-secao">
+
+                <div>
+                    <span class="subtitulo-secao">
+                        NOSSO CATÁLOGO
+                    </span>
+
+                    <h2>
+                        Gadgets do <span>futuro.</span>
+                    </h2>
+
+                    <p>
+                        Descubra produtos que transformam
+                        a maneira como você vive.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- PESQUISA E FILTROS -->
+            <div class="filtros">
+
+                <div class="campo-pesquisa">
+                    <span>⌕</span>
+
+                    <input
+                        type="search"
+                        id="pesquisa"
+                        placeholder="Pesquisar produto..."
+                        aria-label="Pesquisar produtos"
+                    >
+                </div>
+
+                <select id="categoria"
+                        aria-label="Filtrar por categoria">
+
+                    <option value="todos">
+                        Todas as categorias
+                    </option>
+
+                    <option value="Wearables">
+                        Wearables
+                    </option>
+
+                    <option value="Casa Inteligente">
+                        Casa Inteligente
+                    </option>
+
+                    <option value="Áudio Avançado">
+                        Áudio Avançado
+                    </option>
+
+                </select>
+
+            </div>
+
+            <p id="resultado" class="resultado"
+               aria-live="polite"></p>
+
+            <!-- PRODUTOS CRIADOS PELO JAVASCRIPT -->
+            <div id="grade-produtos"
+                 class="grade-produtos">
+            </div>
+
+        </section>
+
+        <!-- CARRINHO -->
+        <section id="carrinho" class="secao carrinho-secao">
+
+            <div class="cabecalho-secao">
+
+                <div>
+                    <span class="subtitulo-secao">
+                        SUA SELEÇÃO
+                    </span>
+
+                    <h2>
+                        Meu <span>carrinho.</span>
+                    </h2>
+
+                    <p>
+                        Confira os produtos que você selecionou.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="carrinho-layout">
+
+                <!-- ITENS -->
+                <div id="itens-carrinho"
+                     class="itens-carrinho">
+                </div>
+
+                <!-- RESUMO -->
+                <aside class="resumo-carrinho">
+
+                    <h3>Resumo do pedido</h3>
+
+                    <div class="linha-resumo">
+                        <span>Quantidade de itens</span>
+                        <strong id="total-itens">0</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Subtotal</span>
+                        <strong id="subtotal">R$ 0,00</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Frete</span>
+                        <strong class="frete">Grátis</strong>
+                    </div>
+
+                    <div class="linha-total">
+                        <span>Valor total</span>
+                        <strong id="valor-total">R$ 0,00</strong>
+                    </div>
+
+                    <button id="finalizar-compra"
+                            class="botao-finalizar"
+                            type="button">
+                        Finalizar compra →
+                    </button>
+
+                    <button id="limpar-carrinho"
+                            class="botao-limpar"
+                            type="button">
+                        Limpar carrinho
+                    </button>
+
+                    <p class="aviso">
+                        ✦ Projeto acadêmico demonstrativo.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="sobre">
+
+            <div class="sobre-conteudo">
+
+                <span class="subtitulo-secao">
+                    SOBRE O PROJETO
+                </span>
+
+                <h2>
+                    A tecnologia<br>
+                    <span>transforma tudo.</span>
+                </h2>
+
+                <p>
+                    A TechStore é um projeto acadêmico de
+                    Desenvolvimento Web Avançado, desenvolvido
+                    utilizando HTML5, CSS3 e JavaScript.
+                </p>
+
+                <p>
+                    O objetivo é demonstrar a criação de uma
+                    aplicação web com catálogo dinâmico,
+                    filtros de pesquisa e carrinho de compras
+                    com armazenamento local.
+                </p>
+
+            </div>
+
+            <div class="sobre-card">
+                <span>TECHSTORE</span>
+                <strong>INOVAÇÃO</strong>
+                <span class="sobre-simbolo">◈</span>
+                <p>O futuro começa aqui.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <a href="#inicio" class="logo">
+            <span class="logo-icon">T</span>
+            Tech<span>Store</span>
+        </a>
+
+        <p>
+            © 2026 TechStore — Projeto acadêmico.
+        </p>
+
+        <a href="#inicio" class="voltar-topo">
+            Voltar ao topo ↑
+        </a>
+
+    </footer>
+
+</body>
+</html>
